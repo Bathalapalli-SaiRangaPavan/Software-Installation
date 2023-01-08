@@ -26,4 +26,8 @@ Click on (verify Email Address)
 - we need to select the plan for our AWS Account.
 - Unless you are planning to do some professional development, i would suggest selecting the Basic Plan. It is Free of cost and great for learning purposes.
 - Once you select your plan, you will see the below Welcome screen. From here on, you can Sign in to your AWS Console. Here, you also have the option of personalizing your experience of using Amazon Web Services.
-- 
+- However, you can also simply continue by clicking Sign in to the Console. After this, you will be again presented with the sign in screen where you can now use your credentials to login.
+### Check ur email AWS will send email once its appproved then u can work with AWS Services.
+
+
+
