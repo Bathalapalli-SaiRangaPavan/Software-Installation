@@ -38,3 +38,19 @@ docker run -d -p 9000:9000 sonarqube:lts
 sonarqube ip : 9000
 ```
 u can see sonarqube dashboard 
+
+Give Below Credentials 
+
+```
+username: admin 
+password: admin   
+```
+
+change password 
+
+```
+old password: admin 
+new password: password  <Create new password>
+confirm password: password <confirm new password>
+```
+
