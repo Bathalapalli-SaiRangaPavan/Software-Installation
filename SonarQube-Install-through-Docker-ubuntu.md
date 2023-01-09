@@ -23,7 +23,7 @@ Execute below command
 ```
 sh docker.sh 
 ```
-It will take time to install Docker  
+- It will take time to install Docker  
 
 Check Docker version  
 ```
@@ -37,7 +37,7 @@ docker run -d -p 9000:9000 sonarqube:lts
 ```
 sonarqube ip : 9000
 ```
-u can see sonarqube dashboard 
+- u can see sonarqube dashboard 
 
 Give Below Credentials 
 
