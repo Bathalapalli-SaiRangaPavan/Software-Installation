@@ -69,9 +69,8 @@ netstat -tunlap
 - Browse TomcatServerIp:8080
 ### Once you see Tomcat GUI
 
-```
-Click on (manager app) 
-```
+
+- Click on (manager app) 
 
 - u get an error 403 access denied
 
@@ -105,7 +104,7 @@ comment below line
 cd ../../../conf/
 ```
 or you can use below commands to go to conf directory 
-Execute Each command. If you have executed above command no need to execute below commands. 
+- Execute each command. If you have executed above command no need to execute below commands. 
 
 ```
 cd ~
@@ -143,21 +142,25 @@ to add one more user add like the above
 - now go to browser and login using usernbame: admin, password: passw0rd
 - now succesfully logged into manager-gui
 
-now click (host manager) -> u get an error 403 access denied
+- now click (host manager) 
+- u get an error 403 access denied
 go to webapps u can see host manager
--> cd ../webapps/
--> ls
--> cd host-manager
--> ls
--> cd META-INF
--> ls
--> vi context.xml
- 
-  -> (comment )
+Execute below each command 
+```
+cd ../webapps/
+ls
+cd host-manager
+ls
+cd META-INF
+ls
+vi context.xml
+```
+comment 
+```
 <! --
 <Valve className="org.apache.catalina.valves.RemoteAddrValve"
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
--->
+```
 
-now go to browser click on (host manager) and login using dusernbame: devopslearning, password: passw0rd
-to clear the cache (ctrl+shift+delete)
+- Now go to browser click on (host manager) and login using usernbame: admin, password: passw0rd
+- To clear the cache (ctrl+shift+delete)
