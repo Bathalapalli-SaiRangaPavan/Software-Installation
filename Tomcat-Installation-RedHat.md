@@ -29,9 +29,9 @@ yum install java-1.8* -y
 
 Browse: https://tomcat.apache.org/download-90.cgi
 
-u can see Binary Distributions, right click (tar.gz) ->  click on (copy link address)
+- u can see Binary Distributions, right click (tar.gz) ->  click on (copy link address)
 
-Im installing Tomcat9 version
+I'm installing Tomcat 9 version
 ```
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.tar.gz
 ```
@@ -50,9 +50,9 @@ cd apache-tomcat-9.0.54
 cd bin/
 ls
 ```
-You can see catalina.sh, startup.sh, shutdown.sh etc binary files
+- u can see catalina.sh, startup.sh, shutdown.sh etc binary files
 
-u should be in bin to start or stop the server ./shutdown.sh
+- u should be in bin to start or stop the server ./shutdown.sh
 
 ```
 ./startup.sh 
@@ -65,39 +65,62 @@ To see which port tomcat is running
 ```
 netstat -tunlap
 ```
-Go to aws  open the port 8080 in the security group (custom TCP 8080 ANYWHERE)
+- Go to aws  open the port 8080 in the security group (custom TCP 8080 ANYWHERE)
+- Browse TomcatServerIp:8080
+### Once you see Tomcat GUI
 
 ```
-Browse Tomcat:8080
+Click on (manager app) 
 ```
--> Click on (manager app) -> u get an error 403 access denied
--> cd ~
--> ls
--> cd apache-tomcat-9.0.54
--> ls
--> cd webapps
--> ls ( u can see 5 default applications)
--> cd manager/
--> ls
--> cd META-INF/
--> vi context.xml
-  -> (comment )
+
+- u get an error 403 access denied
+
+Execute Below each Command in Tomcat Server
+
+```
+cd ~
+ls
+cd apache-tomcat-9.0.54
+ls
+cd webapps
+ls 
+cd manager/
+ls
+cd META-INF/
+vi context.xml
+```
+comment below line 
+
+```
 <! --
 <Valve className="org.apache.catalina.valves.RemoteAddrValve"
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
 -->
+```
+- go to browser and click on manager app you are not getting error it is asking the username and password
 
--> go to browser and click on manager app (we are not getting error it is asking the username and password )
-Go to conf directory
-(cd ../../../conf/)
-or
--> cd ~
--> cd apache-tomcat-9.0.54 
--> ls 
--> cd conf 
--> ls
--> vi tomcat-users.xml
- -> (u can see 
+- Go to conf directory in Tomcat Server u can use below command 
+
+```
+cd ../../../conf/
+```
+or you can use below commands to go to conf directory 
+Execute Each command. If you have executed above command no need to execute below commands. 
+
+```
+cd ~
+cd apache-tomcat-9.0.54 
+ls 
+cd conf 
+ls
+```
+Now u can see tomcat-users.xml u go inside and add username and password
+```
+vi tomcat-users.xml
+```
+u can see below 
+
+```
   <!--
     <role rolenmae="tomcat"
     | 
@@ -105,14 +128,20 @@ or
     |
     |
   -->
-u add below line after -->
--> <user username="devopslearning" password="passw0rd" roles="manager-gui,admin-gui" />
-------------------------------------------------------------------------
-to add one more user uadd like the above n number of users
--> <user username="devopspractise" password="passw0rd" roles="manager-gui,admin-gui" />
---------------------------------------------------------------------------------------
-now go to browser and login using dusernbame: devopslearning, password: passw0rd
-now u succesfully loged in
+```
+u add below line after 
+- Note: Give your username, Password
+```
+<user username="admin" password="passw0rd" roles="manager-gui,admin-gui" />   
+```
+
+to add one more user add like the above 
+```
+<user username="pavan" password="passw0rd" roles="manager-gui,admin-gui" />
+```
+
+- now go to browser and login using usernbame: admin, password: passw0rd
+- now succesfully logged into manager-gui
 
 now click (host manager) -> u get an error 403 access denied
 go to webapps u can see host manager
