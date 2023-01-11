@@ -139,7 +139,7 @@ to add one more user add like the above
 <user username="pavan" password="passw0rd" roles="manager-gui,admin-gui" />
 ```
 
-- now go to browser and login using usernbame: admin, password: passw0rd
+- now go to browser and login using username: admin, password: passw0rd
 - now succesfully logged into manager-gui
 
 - now click (host manager) 
@@ -153,6 +153,9 @@ cd host-manager
 ls
 cd META-INF
 ls
+```
+
+```
 vi context.xml
 ```
 comment 
@@ -160,7 +163,8 @@ comment
 <! --
 <Valve className="org.apache.catalina.valves.RemoteAddrValve"
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+-->
 ```
 
-- Now go to browser click on (host manager) and login using usernbame: admin, password: passw0rd
+- Now go to browser click on (host manager) and login using username: admin, password: passw0rd
 - To clear the cache (ctrl+shift+delete)
