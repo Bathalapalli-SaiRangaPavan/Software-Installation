@@ -20,3 +20,33 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 ```
 aws --version
 ```
+
+
+## Configure AWS Credentials in command line
+```
+aws configure
+```
+```
+AWS Access Key ID [None]: AKIASUF7DEFKSIAWM <give your access key>
+```
+```
+AWS Secret Access Key [None]: WL9G9Tl8lGm7w9t7B3NEDny1+w3N/K5F3HW/ <give your secret access key> 
+```
+```
+Default region name [None]: us-east-1 <give ur region>
+```
+```
+Default output format [None]: json
+```
+
+
+
+## Verify the AWS Credentials Profile
+
+```
+cat $HOME/.aws/credentials 
+```
+
+- go to IAM -> User -> security credentials  
+
+### u can see accesscode at the end last 3 same as in the .aws/credentials 
