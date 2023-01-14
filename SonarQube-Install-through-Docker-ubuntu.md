@@ -54,3 +54,5 @@ new password: password  <Create new password>
 confirm password: password <confirm new password>
 ```
 
+- Note - u always run as a soonar user dont run as a root user. Once u login to server u switch to sonar user su - sonar
+
