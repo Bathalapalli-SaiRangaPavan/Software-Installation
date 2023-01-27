@@ -3,7 +3,7 @@
 - Select (My-First-Project)   #u can create ur own project
 - Select (3 lines next to google compute engine)
 - Select (compute engine) 
-- Select vm instances 
+- Select (vm instances) 
 #### Enable it if its first time 
 - Click (Create Instance)
 - Select (New VM instance)
