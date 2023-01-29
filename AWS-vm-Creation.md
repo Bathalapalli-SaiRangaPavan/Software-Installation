@@ -1,4 +1,4 @@
-# Create Virtial Machine in AWS Cloud
+# Create Virtual Machine in AWS Cloud
 
 Go to AWS Management Console -> Ec2 -> Launch Instance 
 - Step 1: Choose an Amazon Machine Image (AMI) -> [Amazon Linux 2 AMI (HVM) - Kernel 5.10, SSD Volume Type ]
