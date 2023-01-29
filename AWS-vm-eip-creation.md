@@ -20,4 +20,15 @@ Go to AWS Management Console -> Ec2 -> Launch Instance
 - Click (Advanced SSH settings 
 - Select (use private key - Give(Pem file))
 - Click (ok)
-- login: ec2 - user
+- login: ec2 - usert to allocA#### If ou wanELASTIC IP
+
+### Elastic IP
+Elastic IP address is a static IPv4 address designed for dynamic cloud computing. An Elastic IP address is allocated to your AWS account, and is yours until you release it.
+#### If you want to allocate Elastic IP for entire region its billable
+- Step 1 - You can see under network and security (or) Search (Elastic Ip) in AWS management console
+- Step 1.1 - click (Elastic Ip) 
+- Step 2 - click on (allocate elastic ip address) 
+- Step 3 - Let all be default, click (allocate). Now u have got an elastic ip 
+- Step 4 - click on (actions -> associate ec2 instance -> select which ec2 instance u need to associate)
+#### If you don't want to assign Elastic IP to the server
+- Click (elastic ip) -> (actions -> deassociate elastic -> diassociate) -> (actions -> release elastic ip address) 
