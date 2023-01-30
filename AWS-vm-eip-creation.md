@@ -20,7 +20,7 @@ Go to AWS Management Console -> Ec2 -> Launch Instance
 - Click (Advanced SSH settings 
 - Select (use private key - Give(Pem file))
 - Click (ok)
-- login: ec2 - usert to allocA#### If ou wanELASTIC IP
+- login: ec2 - user
 
 ### Elastic IP
 Elastic IP address is a static IPv4 address designed for dynamic cloud computing. An Elastic IP address is allocated to your AWS account, and is yours until you release it.
@@ -32,3 +32,13 @@ Elastic IP address is a static IPv4 address designed for dynamic cloud computing
 - Step 4 - click on (actions -> associate ec2 instance -> select which ec2 instance u need to associate)
 #### If you don't want to assign Elastic IP to the server
 - Click (elastic ip) -> (actions -> deassociate elastic -> diassociate) -> (actions -> release elastic ip address) 
+
+
+#### AWS Pricing Calculator 
+Lets you explore AWS services, and create an estimate for the cost of your use cases on AWS.
+
+- Step 1 - search (Aws Pricing calculator) in Browser/google (or) https://calculator.aws/#/
+- Step 2 - click (Create estimate)
+- Step 3 - To estimate the cost 
+##### Example: Search (EC2) -> click (Configure) -> (region - N virginia) -> operating system  (linux) -> instance type (search instances by name (t2.micro) u can see on demand hourly cost -> utilixzation (24/7 for 30 days (100)) -> pricing strategy (ondemand ec2 instance) -> EBS (30) -> you can see total monthly cost.
+Its like a pay as you go model. Storage is chargable even u stop server (cpu, memory not charged)
