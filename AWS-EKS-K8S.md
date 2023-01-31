@@ -90,4 +90,91 @@ kubectl version --short --client
 aws ec2 describe-vpcs 
 ```
 
+### Set Up eksctl
+
+- Reference: eksctl - https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html#installing-eksctl
+
+```
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+```
+```
+sudo mv /tmp/eksctl /usr/local/bin
+```
+```
+eksctl version
+```
+
+### Create EKS Cluster using eksctl
+
+It will take 15 minutes to 20 minutues. execute below command at together 
+
+```
+eksctl create cluster --name=eksdemo1 \
+                      --region=us-east-1 \
+                      --zones=us-east-1a,us-east-1b \
+                      --without-nodegroup 
+                      
+```
+					  
+								  
+Get List of clusters
+
+```
+eksctl get cluster
+```
+### Create & Associate IAM OIDC Provider for our EKS Cluster
+If u want to use everything effectively following in order is the best execute below 
+```
+eksctl utils associate-iam-oidc-provider \
+    --region us-east-1 \
+    --cluster eksdemo1 \
+    --approve
+```
+
+
+### Create EC2 Keypair
+
+- Create a new EC2 Keypair with name as kube-demo #better u select pem 
+
+This keypair we will use it when creating the EKS NodeGroup.
+This will help us to login to the EKS Worker Nodes using Terminal.
+
+### Create Node Group with additional Add-Ons in Public Subnets
+Create Public Node Group   
+
+what all we create 
+```
+eksctl create --help  
+```
+what all options available for node group we can see here 
+```
+eksctl create nodegroup --help 
+```
+It will take 3 to 5 minutes. It will create t3.medium nodes with minimum 2 and maximum 4 
+```
+eksctl create nodegroup --cluster=eksdemo1 \
+                       --region=us-east-1 \
+                       --name=eksdemo1-ng-public1 \
+                       --node-type=t3.medium \
+                       --nodes=2 \
+                       --nodes-min=2 \
+                       --nodes-max=4 \
+                       --node-volume-size=20 \
+                       --ssh-access \
+                       --ssh-public-key=kube-demo \
+                       --managed \
+                       --asg-access \
+                       --external-dns-access \
+                       --full-ecr-access \
+                       --appmesh-access \
+                       --alb-ingress-access 
+```
+
+Sometimes it will fail and it will recreate again 
+List of nodes available
+```
+kubectl get nodes -o wide
+```
+- Take the pubic ip of created t3.medium nodes and do ssh with kube-demo as a pem file
+
 
