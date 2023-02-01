@@ -5,7 +5,7 @@ Browse -  https://aws.amazon.com/
 ```
  Click on - (Create an Aws Account)
 ```
-### Now u can see Sign Up for AWS
+### Now you can see Sign Up for AWS
 
 ```
 Root User email address - pavan@gmail.com <Give Your Email Address>
@@ -31,12 +31,27 @@ Click on (verify Email Address)
 
 
 ## Billing
-
-- Step 1 -  Click on Acount Name u can see (MY BILLING DASHBOARD)
-- Step 2 -  Click (BILLING PREFERENCES)
+- Step 1 - Click on Acount Name u can see (MY BILLING DASHBOARD)
+- Step 2 - Click (BILLING PREFERENCES)
 - Step 3 - Select (Receive free tier usage alerts -> Give ur email which u registered)
 
 #### Payment methods
 - Dont enable (enable recruiting payment for default payment methods)
 
+## Service Quotas
 
+#### For every service there is limit to create quotas
+- Click on ur profile name (service quotas)
+##### If you want to create more than quotas which they assigned u need to create a case to aws
+
+
+#### Support Center 
+- Click on (?) 
+- Click on (support center) 
+- Click on (create case){looking for service limit increase}
+- Click (service limit increase) 
+##### You provide the details 
+- Limit type (ec2 instance) 
+- Choose the (region)
+- Choose the instance type (p instance) -> New limit value (500) 
+##### Likewise you have to request 
