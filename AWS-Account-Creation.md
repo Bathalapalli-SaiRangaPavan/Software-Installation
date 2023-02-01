@@ -30,4 +30,13 @@ Click on (verify Email Address)
 ### Check ur email AWS will send email once its appproved then u can work with AWS Services.
 
 
+## Billing
+
+- Step 1 -  Click on Acount Name u can see (MY BILLING DASHBOARD)
+- Step 2 -  Click (BILLING PREFERENCES)
+- Step 3 - Select (Receive free tier usage alerts -> Give ur email which u registered)
+
+#### Payment methods
+- Dont enable (enable recruiting payment for default payment methods)
+
 
