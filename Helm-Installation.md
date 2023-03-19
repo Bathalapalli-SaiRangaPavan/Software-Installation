@@ -8,7 +8,12 @@
  ``` 
  ./get_helm.sh
  ```
-## Helm Uninstallation 
+ 
+ #### Check Version 
+ ```
+ helm version 
+ ```
+## Uninstall Helm 
  To see which folder its installed
  ```
  which helm 
