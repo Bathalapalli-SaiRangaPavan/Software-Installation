@@ -177,4 +177,21 @@ kubectl get nodes -o wide
 ```
 - Take the pubic ip of created t3.medium nodes and do ssh with kube-demo as a pem file
 
+## Delete EKS Cluster
 
+### Delete Node Groups
+```
+# List EKS Clusters
+eksctl get clusters
+
+# Capture Node Group name
+eksctl get nodegroup --cluster=eksdemo1
+
+# Delete Node Group
+eksctl delete nodegroup --cluster=eksdemo1 --name=eksdemo1-ng-public1
+```
+
+## Delete Cluster
+```
+eksctl delete cluster eksdemo1
+```
